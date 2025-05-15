@@ -12,3 +12,10 @@ model:
     logging_steps: 500
     save_steps: 1000
     logging_dir: "$HOME/projects/vermissa/logs/model=gpt2/book=sherlock"
+  generate:
+    max_new_tokens: 50
+    do_sample: True
+    top_k: 50
+    top_p: 0.95
+    temperature: 0.8
+    repetition_penalty: 1.2
