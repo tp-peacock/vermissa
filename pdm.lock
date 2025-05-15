@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:3fa10422f613b5e227312f7509e6bc4ca2b64a6eddf1ac27d16e309f6edaaba7"
+content_hash = "sha256:22289bb782a043cd4cd9d817c420d1ef710964488f00c5e59c9c9b031df219bb"
 
 [[metadata.targets]]
 requires_python = ">=3.10"
@@ -51,6 +51,21 @@ groups = ["default", "dev"]
 files = [
     {file = "asttokens-3.0.0-py3-none-any.whl", hash = "sha256:e3078351a059199dd5138cb1c706e6430c05eff2ff136af5eb4790f9d28932e2"},
     {file = "asttokens-3.0.0.tar.gz", hash = "sha256:0dcd8baa8d62b0c1d118b399b2ddba3c4aff271d0d7a9e0d4c1681c79035bbc7"},
+]
+
+[[package]]
+name = "bitsandbytes"
+version = "0.45.5"
+requires_python = ">=3.8"
+summary = "k-bit optimizers and matrix multiplication routines."
+groups = ["default"]
+dependencies = [
+    "numpy>=1.17",
+    "torch<3,>=2.0",
+]
+files = [
+    {file = "bitsandbytes-0.45.5-py3-none-manylinux_2_24_x86_64.whl", hash = "sha256:a5453f30cc6aab6ccaac364e6bf51a7808d3da5f71763dffeb6d9694c59136e4"},
+    {file = "bitsandbytes-0.45.5-py3-none-win_amd64.whl", hash = "sha256:ed1c61b91d989d6a33fd05737d6edbf5086d8ebc89235ee632c7a19144085da2"},
 ]
 
 [[package]]

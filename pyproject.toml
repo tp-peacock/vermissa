@@ -9,7 +9,9 @@ dependencies = [
     "transformers[torch]",
     "torch",
     "hf_xet",
-    "ipykernel" 
+    "ipykernel",
+    "bitsandbytes",
+    "accelerate"
 ]
 
 [build-system]
