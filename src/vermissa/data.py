@@ -3,12 +3,11 @@ import argparse
 import requests
 import logging
 import os
-import yaml
 import torch
 from pathlib import Path
 from torch.utils.data import Dataset
 from transformers import AutoTokenizer
-from utils import load_config
+from vermissa.utils import load_config
 
 logging.basicConfig(
     level=logging.INFO,

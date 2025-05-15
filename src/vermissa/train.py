@@ -1,8 +1,8 @@
 import argparse
 from torch.utils.data import DataLoader
 from transformers import Trainer, TrainingArguments, AutoModelForCausalLM
-from data import create_dataset
-from utils import load_config
+from vermissa.data import create_dataset
+from vermissa.utils import load_config
 
 if __name__ == "__main__":
 

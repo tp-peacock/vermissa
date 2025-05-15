@@ -8,7 +8,8 @@ dependencies = [
     "requests",
     "transformers[torch]",
     "torch",
-    "hf_xet" 
+    "hf_xet",
+    "ipykernel" 
 ]
 
 [build-system]
@@ -18,3 +19,4 @@ build-backend = "pdm.pep517.api"
 dev = [
     "ipython>=8.36.0",
 ]
+
