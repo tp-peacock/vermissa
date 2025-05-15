@@ -20,3 +20,5 @@ dev = [
     "ipython>=8.36.0",
 ]
 
+[tool.pdm]
+package-dir = "src"
