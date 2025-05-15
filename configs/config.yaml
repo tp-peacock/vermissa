@@ -2,7 +2,6 @@ data:
   block_size: 128
   root: "$HOME/projects/vermissa/data/book=sherlock"
   download_url: "https://www.gutenberg.org/cache/epub/3289/pg3289.txt"
-  output_dir: "./gpt2_sherlock"
 model:
   name: "gpt2"
   output_dir: "$HOME/projects/vermissa/models/model=gpt2/book=sherlock"
