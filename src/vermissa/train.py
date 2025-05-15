@@ -13,14 +13,9 @@ def create_trainer(config):
       model=model,
       args=TrainingArguments(
           output_dir=model_cfg["output_dir"],
-          num_train_epochs=model_cfg["training"]["num_epochs"],
-          per_device_train_batch_size=model_cfg["training"]["batch_size"],
-          save_steps=model_cfg["training"]["save_steps"],
-          logging_steps=model_cfg["training"]["logging_steps"],
-          logging_dir=model_cfg["training"]["logging_dir"],
-          report_to=[],  # disable WandB
+          **model_cfg["training"]
       ),
-      train_dataset=dataset
+      train_dataset=dataset   
   )
   logging.info(f"creating trainer: {trainer.model}")
   return trainer

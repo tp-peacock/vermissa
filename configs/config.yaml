@@ -6,11 +6,12 @@ model:
   name: "gpt2"
   output_dir: "$HOME/projects/vermissa/models/model=gpt2/book=sherlock"
   training:
-    batch_size: 4
-    num_epochs: 3
+    per_device_train_batch_size: 4
+    num_train_epochs: 3
     logging_steps: 500
     save_steps: 1000
     logging_dir: "$HOME/projects/vermissa/logs/model=gpt2/book=sherlock"
+    report_to: []
   generate:
     max_new_tokens: 50
     do_sample: True
