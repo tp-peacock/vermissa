@@ -5,10 +5,10 @@ from vermissa.utils import load_config
 import logging
 
 
-def create_trainer(config, quantize=False):
+def create_trainer(config):
   model_cfg = config["model"]
   dataset = create_dataset(config)
-  model = AutoModelForCausalLM.from_pretrained(model_cfg["name"], load_in_8bit=quantize)
+  model = AutoModelForCausalLM.from_pretrained(**model_cfg["pretrained"])
   trainer =  Trainer(
       model=model,
       args=TrainingArguments(

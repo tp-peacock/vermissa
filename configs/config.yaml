@@ -5,6 +5,8 @@ data:
 model:
   name: "gpt2"
   output_dir: "$HOME/projects/vermissa/models/model=gpt2/book=sherlock"
+  pretrained:
+    pretrained_model_name_or_path: "gpt2"
   training:
     per_device_train_batch_size: 4
     num_train_epochs: 3
