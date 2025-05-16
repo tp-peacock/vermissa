@@ -1,0 +1,26 @@
+# should run on A100
+data:
+  block_size: 128
+  root: "$HOME/projects/vermissa/data/tokenizer=TinyLlama_v1.1/book=sherlock"
+  download_url: "https://www.gutenberg.org/cache/epub/3289/pg3289.txt"
+model:
+  name: "TinyLlama/TinyLlama_v1.1"
+  output_dir: "$HOME/projects/vermissa/models/model=TinyLlama_v1.1/book=sherlock"
+  pretrained:
+    pretrained_model_name_or_path: "TinyLlama/TinyLlama_v1.1"
+  training:
+    per_device_train_batch_size: 1
+    gradient_accumulation_steps: 1
+    fp16: true
+    num_train_epochs: 3
+    logging_steps: 500
+    save_steps: 1000
+    logging_dir: "$HOME/projects/vermissa/logs/model=TinyLlama_v1.1/book=sherlock"
+    report_to: []
+  generate:
+    max_new_tokens: 50
+    do_sample: True
+    top_k: 50
+    top_p: 0.95
+    temperature: 0.8
+    repetition_penalty: 1.2
